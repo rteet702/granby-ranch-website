@@ -2,12 +2,22 @@ import GoldButton from "@/components/GoldButton";
 import { Lato } from "@next/font/google";
 import Image from "next/image";
 import logo from "../../public/logo-white.png";
+import cloudIcon from "../../public/clouds.svg";
 import LinkCard from "@/components/LinkCard";
 import Link from "next/link";
 
 const lato = Lato({ weight: "900", subsets: ["latin"] });
 
-export default function Home() {
+interface IWeatherAPIResponse {
+    message: string;
+    data: {
+        temperature: number;
+    };
+}
+
+export default async function Home() {
+    const currentWeatherData: IWeatherAPIResponse = await getWeatherData();
+
     return (
         <main className={lato.className}>
             {/* main hero */}
@@ -58,7 +68,50 @@ export default function Home() {
                         <p>EVENTS</p>
                     </LinkCard>
                 </div>
+                {/* weather widget */}
+                <div className="bg-slate-700 text-white absolute bottom-0 right-0 h-16 min-w-[6rem] shadow-lg px-6 flex items-center justify-center gap-5">
+                    {currentWeatherData ? (
+                        <>
+                            <Image
+                                className="h-6 w-6"
+                                src={cloudIcon}
+                                alt="clouds"
+                            />
+                            <p>
+                                {currentWeatherData.data.temperature.toFixed(0)}{" "}
+                                °F
+                            </p>
+                        </>
+                    ) : (
+                        "Api is Dead"
+                    )}
+                </div>
             </section>
         </main>
     );
+}
+
+async function getWeatherData() {
+    if (!process.env.API_KEY) {
+        throw new Error(
+            "Ensure the developer has set the API key in the environment settings."
+        );
+    }
+
+    const headers = new Headers({ "x-api-key": process.env.API_KEY });
+    const response = await fetch(
+        "https://api.ambeedata.com/weather/latest/by-lat-lng?lat=40.043705&lng=-105.905750",
+        { headers, next: { revalidate: 600 } }
+    );
+
+    if (!response.ok) {
+        console.error(response);
+        throw new Error("Failed to fetch data.");
+    }
+
+    const converted = await response.json();
+    return {
+        message: converted.message,
+        data: converted.data,
+    } as IWeatherAPIResponse;
 }

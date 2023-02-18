@@ -9,3 +9,7 @@
     backdrop-filter: blur(1rem);
     mask: linear-gradient(to left, transparent, black 35%);
 }
+
+::-webkit-scrollbar {
+    width: 0;
+}

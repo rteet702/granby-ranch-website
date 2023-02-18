@@ -5,6 +5,7 @@ import cloudIcon from "../../public/clouds.svg";
 import LinkCard from "@/components/LinkCard";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import NotificationModal from "@/components/Notification";
 
 const lato = Lato({ weight: "900", subsets: ["latin"] });
 
@@ -20,6 +21,8 @@ export default async function Home() {
 
     return (
         <main className={lato.className}>
+            {/* extra alert */}
+            <NotificationModal text="Limited Availability for Walk-Up Rental Equipment. Reservations are Recommended." />
             {/* navbar */}
             <Navbar />
             <section

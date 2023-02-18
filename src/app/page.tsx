@@ -30,7 +30,7 @@ export default async function Home() {
                 className='bg-[url("../../public/bg.jpg")] h-[100svh] text-slate-700 relative'
             >
                 {/* main hero */}
-                <div className="blur-feathered w-full lg:w-1/2 flex flex-col items-start justify-center p-16">
+                <div className="blur-feathered w-full lg:w-1/2 flex flex-col items-start justify-center p-16 gap-3">
                     <h1 className="text-4xl">
                         PLAN YOUR NEXT
                         <span className="text-6xl block">SKI VACATION</span>

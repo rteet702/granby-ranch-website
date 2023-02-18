@@ -67,7 +67,7 @@ export default function NavModal() {
                 </div>
                 <div className="flex items-start justify-between gap-6">
                     <ul className="flex flex-col text-right gap-1 text-xl">
-                        <h2 className="text-4xl text-white">Moutnain Info</h2>
+                        <h2 className="text-4xl text-white">Mountain Info</h2>
                         <li>Live Camera</li>
                         <li>Ski Report and Weather</li>
                         <li>Tickets and Passes</li>
@@ -83,7 +83,7 @@ export default function NavModal() {
                     </ul>
                 </div>
                 <div className="text-right">
-                    <p className="text-cyan-600">#GranyRanchRising</p>
+                    <p className="text-cyan-600">#GranbyRanchRising</p>
                     <p className="text-yellow-600">QUESTIONS? CALL US TODAY!</p>
                     <p className="text-white">888.850.4615</p>
                 </div>

@@ -1,12 +1,9 @@
 import GoldButton from "@/components/GoldButton";
 import { Lato } from "@next/font/google";
 import Image from "next/image";
-import logo from "../../public/logo-white.png";
 import cloudIcon from "../../public/clouds.svg";
 import LinkCard from "@/components/LinkCard";
-import Link from "next/link";
-import NavModal from "../components/NavModal";
-import { atom } from "jotai/vanilla";
+import Navbar from "@/components/Navbar";
 
 const lato = Lato({ weight: "900", subsets: ["latin"] });
 
@@ -22,15 +19,8 @@ export default async function Home() {
 
     return (
         <main className={lato.className}>
-            {/* modal */}
-
             {/* navbar */}
-            <nav className="fixed z-20 px-16 py-8 flex items-center justify-between w-full">
-                <Link href="/">
-                    <Image src={logo} alt="Granby Ranch" />
-                </Link>
-                <NavModal />
-            </nav>
+            <Navbar />
             <section
                 aria-label="hero main header"
                 className='bg-[url("../../public/bg.jpg")] h-[100svh] text-slate-700 relative'
@@ -92,6 +82,13 @@ export default async function Home() {
                         "Api is Dead"
                     )}
                 </div>
+            </section>
+            <section className="h-[50svh] flex flex-col items-center justify-center">
+                <h2 className="text-4xl">Plan Your Trip</h2>
+                <p className="text-xl">
+                    No matter the season, Granby Ranch has entertainment, events
+                    and activities for everyone!
+                </p>
             </section>
         </main>
     );

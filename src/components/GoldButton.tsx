@@ -10,7 +10,7 @@ export default function GoldButton({ href, children, ...rest }: Props) {
         <Link
             href={href}
             {...rest}
-            className="bg-yellow-500 text-white px-5 py-3 border-yellow-500 border-2 hover:bg-cyan-600 hover:border-white transition-colors"
+            className="flex items-center justify-center bg-yellow-500 text-white px-5 py-3 border-yellow-500 border-2 hover:bg-cyan-600 hover:border-white transition-colors"
         >
             {children}
         </Link>

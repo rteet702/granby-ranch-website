@@ -1,11 +1,14 @@
 import GoldButton from "@/components/GoldButton";
 import { Lato } from "@next/font/google";
 import Image from "next/image";
+import igLogo from "../../public/ig-2.svg";
+import grlogo from "../../public/grlogo.png";
 import cloudIcon from "../../public/clouds.svg";
 import LinkCard from "@/components/LinkCard";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import NotificationModal from "@/components/Notification";
+import EmailForm from "@/components/EmailForm";
 
 const lato = Lato({ weight: "900", subsets: ["latin"] });
 
@@ -151,6 +154,83 @@ export default async function Home() {
                         />
                         <p>Mountain Info</p>
                     </Link>
+                </div>
+            </section>
+            <section className='bg-[url("../../public/bg-2.svg")] p-16 text-white flex justify-around items-center'>
+                <div>
+                    <h2 className="text-4xl">GRANBY SOCIAL</h2>
+                    <p>
+                        Check out the latest from posts in and around Granby
+                        Ranch
+                    </p>
+                </div>
+                <a
+                    href="https://www.instagram.com/granbyranch/"
+                    target="_blank"
+                    className="flex gap-4"
+                >
+                    <p>Connect with us</p>
+                    <Image src={igLogo} alt="instagram logo" />
+                </a>
+            </section>
+            <section className="p-4 flex lg:flex-row flex-wrap gap-5 justify-center">
+                <img
+                    className="w-[150px] lg:w-[350px]"
+                    src="https://via.placeholder.com/350"
+                    alt="placeholder"
+                />
+                <img
+                    className="w-[150px] lg:w-[350px]"
+                    src="https://via.placeholder.com/350"
+                    alt="placeholder"
+                />
+                <img
+                    className="w-[150px] lg:w-[350px]"
+                    src="https://via.placeholder.com/350"
+                    alt="placeholder"
+                />
+                <img
+                    className="w-[150px] lg:w-[350px]"
+                    src="https://via.placeholder.com/350"
+                    alt="placeholder"
+                />
+                <img
+                    className="w-[150px] lg:w-[350px]"
+                    src="https://via.placeholder.com/350"
+                    alt="placeholder"
+                />
+            </section>
+            <section className="bg-[#5996A8] p-16 text-white lg:flex gap-8 justify-around">
+                <div>
+                    <h2 className="text-4xl">STAY IN THE LOOP</h2>
+                    <p>
+                        Subscribe to receive the latest news, offers and deals
+                        from Granby Ranch.
+                    </p>
+                </div>
+                <EmailForm />
+            </section>
+            <section className='bg-[url("../../public/bg-2.svg")] p-16 text-white flex flex-col lg:flex-row justify-center items-start gap-16'>
+                <Image src={grlogo} alt="gr in a circle" />
+                <ul className="flex flex-wrap gap-4 max-w-[500px]">
+                    <li>Contact Us</li>
+                    <li>Directions</li>
+                    <li>Careers</li>
+                    <li>News</li>
+                    <li>Mountain Info</li>
+                    <li>Safety and Policies</li>
+                    <li>Granby Ranch Rising</li>
+                    <li>Live at Granby Ranch</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <div>
+                    <h2 className="text-yellow-600 text-xl">
+                        HOURS OF OPERATION
+                    </h2>
+                    <p>Base Lodge Services – 8am-5pm</p>
+                    <p>First Chair Cafe – 8am-2pm</p>
+                    <p>Bluebird Bistro – 11am-8pm</p>
+                    <p>8350 Lounge – Fri. and Sat. 3pm-6pm</p>
                 </div>
             </section>
         </main>

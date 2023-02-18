@@ -30,7 +30,7 @@ export default async function Home() {
                 className='bg-[url("../../public/bg.jpg")] h-[100svh] text-slate-700 relative'
             >
                 {/* main hero */}
-                <div className="blur-feathered w-1/2 flex flex-col items-start justify-center p-16">
+                <div className="blur-feathered w-full lg:w-1/2 flex flex-col items-start justify-center p-16">
                     <h1 className="text-4xl">
                         PLAN YOUR NEXT
                         <span className="text-6xl block">SKI VACATION</span>
@@ -87,7 +87,7 @@ export default async function Home() {
                     )}
                 </div>
             </section>
-            <section className="h-[50svh] flex flex-col items-center justify-center gap-5">
+            <section className="flex flex-col items-center justify-center gap-5 py-8">
                 <div className="text-center">
                     <h2 className="text-4xl">Plan Your Trip</h2>
                     <p className="text-xl">
@@ -95,7 +95,7 @@ export default async function Home() {
                         events and activities for everyone!
                     </p>
                 </div>
-                <div className="flex gap-5">
+                <div className="flex flex-col lg:flex-row gap-5">
                     <Link
                         href="/directions-granby-ranch"
                         className="flex flex-col gap-5 items-center justify-center"

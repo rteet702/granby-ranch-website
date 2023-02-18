@@ -4,6 +4,7 @@ import Image from "next/image";
 import cloudIcon from "../../public/clouds.svg";
 import LinkCard from "@/components/LinkCard";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 const lato = Lato({ weight: "900", subsets: ["latin"] });
 
@@ -83,12 +84,68 @@ export default async function Home() {
                     )}
                 </div>
             </section>
-            <section className="h-[50svh] flex flex-col items-center justify-center">
-                <h2 className="text-4xl">Plan Your Trip</h2>
-                <p className="text-xl">
-                    No matter the season, Granby Ranch has entertainment, events
-                    and activities for everyone!
-                </p>
+            <section className="h-[50svh] flex flex-col items-center justify-center gap-5">
+                <div className="text-center">
+                    <h2 className="text-4xl">Plan Your Trip</h2>
+                    <p className="text-xl">
+                        No matter the season, Granby Ranch has entertainment,
+                        events and activities for everyone!
+                    </p>
+                </div>
+                <div className="flex gap-5">
+                    <Link
+                        href="/directions-granby-ranch"
+                        className="flex flex-col gap-5 items-center justify-center"
+                    >
+                        <Image
+                            height={250}
+                            width={250}
+                            src="/sections/wanda.jpg"
+                            alt="truck"
+                            className="hover:opacity-60 transition-all duration-500 cursor-pointer"
+                        />
+                        <p>Directions, Parking, and Hours</p>
+                    </Link>
+                    <Link
+                        href="/"
+                        className="flex flex-col gap-5 items-center justify-center"
+                    >
+                        <Image
+                            height={250}
+                            width={250}
+                            src="/sections/dining.jpg"
+                            alt="food"
+                            className="hover:opacity-60 transition-all duration-500 cursor-pointer"
+                        />
+                        <p>Dining</p>
+                    </Link>
+                    <Link
+                        href="/"
+                        className="flex flex-col gap-5 items-center justify-center"
+                    >
+                        <Image
+                            height={250}
+                            width={250}
+                            src="/sections/weddings.jpg"
+                            alt="bride and groom"
+                            className="hover:opacity-60 transition-all duration-500 cursor-pointer"
+                        />
+                        <p>Weddings and Groups</p>
+                    </Link>
+                    <Link
+                        href="/"
+                        className="flex flex-col gap-5 items-center justify-center"
+                    >
+                        <Image
+                            height={250}
+                            width={250}
+                            src="/sections/mountain.jpg"
+                            alt="snowy mountains"
+                            className="hover:opacity-60 transition-all duration-500 cursor-pointer"
+                        />
+                        <p>Mountain Info</p>
+                    </Link>
+                </div>
             </section>
         </main>
     );

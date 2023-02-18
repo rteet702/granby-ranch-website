@@ -167,6 +167,7 @@ export default async function Home() {
                 <a
                     href="https://www.instagram.com/granbyranch/"
                     target="_blank"
+                    rel="noreferrer"
                     className="flex gap-4"
                 >
                     <p>Connect with us</p>

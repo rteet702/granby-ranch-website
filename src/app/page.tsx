@@ -5,6 +5,8 @@ import logo from "../../public/logo-white.png";
 import cloudIcon from "../../public/clouds.svg";
 import LinkCard from "@/components/LinkCard";
 import Link from "next/link";
+import NavModal from "../components/NavModal";
+import { atom } from "jotai/vanilla";
 
 const lato = Lato({ weight: "900", subsets: ["latin"] });
 
@@ -20,16 +22,20 @@ export default async function Home() {
 
     return (
         <main className={lato.className}>
-            {/* main hero */}
+            {/* modal */}
+
+            {/* navbar */}
+            <nav className="fixed z-20 px-16 py-8 flex items-center justify-between w-full">
+                <Link href="/">
+                    <Image src={logo} alt="Granby Ranch" />
+                </Link>
+                <NavModal />
+            </nav>
             <section
                 aria-label="hero main header"
                 className='bg-[url("../../public/bg.jpg")] h-[100svh] text-slate-700 relative'
             >
-                <nav className="fixed z-20 px-16 py-8">
-                    <Link href="/">
-                        <Image src={logo} alt="Granby Ranch" />
-                    </Link>
-                </nav>
+                {/* main hero */}
                 <div className="blur-feathered w-1/2 flex flex-col items-start justify-center p-16">
                     <h1 className="text-4xl">
                         PLAN YOUR NEXT
@@ -48,7 +54,7 @@ export default async function Home() {
                     </div>
                 </div>
                 {/* footer options */}
-                <div className="bg-black absolute bottom-0 left-[32rem] right-[32rem] flex drop-shadow-2xl z-10">
+                <div className="bg-black absolute bottom-0 left-[32rem] right-[32rem] drop-shadow-2xl z-10 hidden 2xl:flex">
                     <LinkCard classes="bg-blue-900" href="/tickets-passes">
                         <p>TICKETS & PASSES</p>
                     </LinkCard>

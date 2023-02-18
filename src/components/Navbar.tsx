@@ -26,7 +26,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed z-20 px-8 lg:px-16 py-8 flex items-center justify-between w-full transition-colors duration-500 ${
+            className={`fixed z-20 px-4 lg:px-16 py-4 flex items-center justify-between w-full transition-colors duration-500 ${
                 fade ? "bg-slate-700" : "bg-transparent"
             }`}
         >

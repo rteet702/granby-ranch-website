@@ -35,7 +35,7 @@ export default function NavModal() {
                 onClick={handleToggle}
                 className="absolute top-0 right-0 left-0 h-screen bg-black bg-opacity-40 z-[100] cursor-pointer"
             ></div>
-            <div className="absolute top-0 right-0 h-screen px-32 py-16 w-full lg:w-1/3 flex flex-col gap-16 bg-slate-700 bg-opacity-90 backdrop-blur-sm z-[300] text-neutral-300">
+            <div className="absolute top-0 right-0 h-screen px-8 lg:px-16 py-8 w-full lg:w-1/2 flex flex-col justify-center gap-16 bg-slate-700 bg-opacity-90 backdrop-blur-sm z-[300] text-neutral-300">
                 <button onClick={handleToggle}>
                     <Image
                         src={closeButton}
@@ -44,8 +44,10 @@ export default function NavModal() {
                     />
                 </button>
                 <div className="flex items-start justify-between gap-6">
-                    <ul className="flex flex-col text-right gap-1 text-xl">
-                        <h2 className="text-4xl text-white">Plan</h2>
+                    <ul className="flex flex-col text-right gap-1 text-lg">
+                        <h2 className="text-2xl lg:text-4xl text-white">
+                            Plan
+                        </h2>
                         <li>Tickets and Passes</li>
                         <li>Indy Pass</li>
                         <li>Rentals</li>
@@ -54,8 +56,10 @@ export default function NavModal() {
                         <li>Groups</li>
                         <li>Families</li>
                     </ul>
-                    <ul className="flex flex-col text-right gap-1 text-xl">
-                        <h2 className="text-4xl text-white">Play</h2>
+                    <ul className="flex flex-col text-right gap-1 text-lg">
+                        <h2 className="text-2xl lg:text-4xl text-white">
+                            Play
+                        </h2>
                         <li>Events</li>
                         <li>Ski</li>
                         <li>Dining</li>
@@ -66,8 +70,10 @@ export default function NavModal() {
                     </ul>
                 </div>
                 <div className="flex items-start justify-between gap-6">
-                    <ul className="flex flex-col text-right gap-1 text-xl">
-                        <h2 className="text-4xl text-white">Mountain Info</h2>
+                    <ul className="flex flex-col text-right gap-1 text-lg">
+                        <h2 className="text-2xl lg:text-4xl text-white">
+                            Mountain Info
+                        </h2>
                         <li>Live Camera</li>
                         <li>Ski Report and Weather</li>
                         <li>Tickets and Passes</li>
@@ -75,8 +81,10 @@ export default function NavModal() {
                         <li>Uphill Policy</li>
                         <li>Accessibility</li>
                     </ul>
-                    <ul className="flex flex-col text-right gap-1 text-xl">
-                        <h2 className="text-4xl text-white">Community</h2>
+                    <ul className="flex flex-col text-right gap-1 text-lg">
+                        <h2 className="text-2xl lg:text-4xl text-white">
+                            Community
+                        </h2>
                         <li>Careers</li>
                         <li>News</li>
                         <li>Live at Granby Ranch</li>

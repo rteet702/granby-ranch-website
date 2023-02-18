@@ -69,7 +69,7 @@ export default async function Home() {
                     </LinkCard>
                 </div>
                 {/* weather widget */}
-                <div className="bg-slate-700 text-white absolute bottom-0 right-0 h-16 min-w-[6rem] shadow-lg px-6 flex items-center justify-center gap-5">
+                <div className="bg-slate-700 text-white absolute bottom-0 right-0 h-16 w-full lg:w-auto lg:min-w-[6rem] shadow-lg px-6 flex items-center justify-center gap-5">
                     {currentWeatherData ? (
                         <>
                             <Image
@@ -77,6 +77,9 @@ export default async function Home() {
                                 src={cloudIcon}
                                 alt="clouds"
                             />
+                            <span className="block lg:hidden">
+                                Current Weather:{" "}
+                            </span>
                             <p>
                                 {currentWeatherData.data.temperature.toFixed(0)}{" "}
                                 °F
